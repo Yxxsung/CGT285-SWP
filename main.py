@@ -5,6 +5,7 @@
 #Imports the pygame module.
 #Had to install in the terminal first using "pip install pygame"
 import pygame
+import math
 
 #Initiates the pygame module
 pygame.init()
@@ -13,7 +14,7 @@ pygame.init()
 screen = pygame.display.set_mode((1000, 800))
 
 #Defines the name, coordinates, width, and length of the rectangle
-rect=pygame.Rect(400,300,150,100)
+rect=pygame.Rect(385,300,180,100)
 #tells the program to draw the above rectangle, named rect, and fill it in as white
 pygame.draw.rect(screen,(255,255,255), rect)
 
@@ -22,7 +23,7 @@ pygame.draw.circle(screen, (255,255,255), (425,425), (30))
 pygame.draw.circle(screen, (255,255,255), (525,425), (30))
 
 #Tells the program to draw an arc on top to complete the truck
-pygame.draw.arc(screen, (255,255,255), (50,50,200,100), 0, 0, 2)
+pygame.draw.arc(screen, (255,255,255), (400,260,149,80), 0, math.pi, 2)
 
 pygame.display.update()
 done = False
