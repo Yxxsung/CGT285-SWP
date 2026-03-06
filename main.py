@@ -9,10 +9,21 @@ import pygame
 #Initiates the pygame module
 pygame.init()
 
+#Sets the name and size of the window
 screen = pygame.display.set_mode((1000, 800))
-rect=pygame.Rect(300,300,150,100)
+
+#Defines the name, coordinates, width, and length of the rectangle
+rect=pygame.Rect(400,300,150,100)
+#tells the program to draw the above rectangle, named rect, and fill it in as white
 pygame.draw.rect(screen,(255,255,255), rect)
-pygame.draw.circle(screen, (255,255,255), (100,100), (100))
+
+#Tells the program to draw 2 circles and fill them in as white
+pygame.draw.circle(screen, (255,255,255), (425,425), (30))
+pygame.draw.circle(screen, (255,255,255), (525,425), (30))
+
+#Tells the program to draw an arc on top to complete the truck
+pygame.draw.arc(screen, (255,255,255), (50,50,200,100), 0, 0, 2)
+
 pygame.display.update()
 done = False
 while not done:
